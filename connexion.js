@@ -1,5 +1,4 @@
-// Base de données simulée (dans la pratique, utilisez un backend réel)
-// Les mots de passe sont stockés avec un hachage simulé pour l'exemple
+// Les mots de passe sont stockés avec un hachage simulé
 let users = [
     { id: 1, username: 'admin', email: 'admin@example.com', password: 'bcrypt$admin123' },
     { id: 2, username: 'user', email: 'user@example.com', password: 'bcrypt$user123' }
@@ -28,15 +27,13 @@ const regEmailInput = document.getElementById('reg-email');
 const regPasswordInput = document.getElementById('reg-password');
 const regConfirmPasswordInput = document.getElementById('reg-confirm-password');
 
-// Fonction de hachage simulée (en production, utilisez bcrypt ou similaire)
+// Fonction de hachage simulée (en production, utilise bcrypt ou similaire)
 function hashPassword(password) {
-    // Ceci est une simulation - NE PAS UTILISER en production!
     return 'bcrypt$' + password;
 }
 
 // Fonction de vérification de mot de passe simulée
 function verifyPassword(plainPassword, hashedPassword) {
-    // Ceci est une simulation - NE PAS UTILISER en production!
     return hashedPassword === 'bcrypt$' + plainPassword;
 }
 
